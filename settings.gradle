@@ -1,0 +1,2 @@
+rootProject.name = "RestApiTask"
+include ':app'

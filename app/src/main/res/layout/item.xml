@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+        <TextView
+            android:id="@+id/id"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Id:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/title"
+            app:layout_constraintTop_toBottomOf="@id/id"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title:"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/body"
+            app:layout_constraintTop_toBottomOf="@id/titlePost"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+            android:text="Body:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/idPost"
+            app:layout_constraintRight_toLeftOf="@id/menu"
+            app:layout_constraintTop_toTopOf="@id/id"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/body"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            tools:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/titlePost"
+            app:layout_constraintTop_toTopOf="@id/title"
+            android:layout_width="280dp"
+            app:layout_constraintRight_toLeftOf="@id/menu"
+            app:layout_constraintStart_toEndOf="@id/body"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            tools:text="@string/app_name" />
+
+
+        <TextView
+            android:id="@+id/bodyPost"
+            app:layout_constraintTop_toTopOf="@id/body"
+            android:layout_width="280dp"
+            app:layout_constraintRight_toLeftOf="@id/menu"
+            app:layout_constraintStart_toEndOf="@id/body"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            tools:text="@string/app_name" />
+
+        <ImageButton
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu"
+            app:layout_constraintTop_toTopOf="@id/id"
+            app:layout_constraintBottom_toBottomOf="@id/id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/bodyPost"
+            android:background="@android:color/transparent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
